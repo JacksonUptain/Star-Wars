@@ -481,7 +481,7 @@ function animate() {
         // Collision detected
       
         console.log('Collision detected between model and sphere');
-        window.location.href = '/Ewok/Ewok.html';
+        window.location.href = 'Ewok/Ewok.html';
     }
 
 
