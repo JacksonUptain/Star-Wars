@@ -1,7 +1,7 @@
 import * as THREE from 'three';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
-import { TextGeometry } from 'three/addons/geometries/TextGeometry.js';
-import { FontLoader } from 'three/addons/loaders/FontLoader.js';
+import { TextGeometry } from 'https://unpkg.com/three@0.160.0/examples/jsm/geometries/TextGeometry.js';
+import { FontLoader } from 'https://unpkg.com/three@0.160.0/examples/jsm/loaders/FontLoader.js';
 const treeModelPath = 'redwoods.glb'; // Replace with the path to your tree GLTF model
 const treeLoader = new GLTFLoader();
 const clock = new THREE.Clock();
