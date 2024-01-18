@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Ewok AT-ST</title>
+        <script type="importmap">
+            {
+                "imports": {
+                "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+                "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+                }
+            }
+        </script>
+		<style>
+			body {
+				margin: 0;
+				overflow: hidden;
+				font-family: 'Times New Roman', Times, serif;
+			}
+
+			canvas {
+				display: block;
+			}
+			#crosshair {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 25px;
+            height: 25px;
+            border: 2px solid white;
+            border-radius: 50%;
+            box-sizing: border-box;
+            pointer-events: none; /* Make sure the crosshair doesn't block interaction with the canvas */
+            }
+			#overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #fff;
+        }
+
+        #popup {
+            background-color: black;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+            position: relative; /* Added for positioning the close button */
+        }
+		#overlay2 {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #fff;
+        }
+
+        #popup2 {
+            background-color: black;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+            position: relative; /* Added for positioning the close button */
+        }
+
+        #closeBtn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+            font-size: 20px;
+            color: #fff; /* Changed the color to white */
+        }
+
+		.loading-screen {
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: rgba(6, 2, 24, 0.8); /* Semi-transparent white background */
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			z-index: 9999; /* Ensure it's on top of other elements */
+			color: white;
+			font-size: 2.5rem;
+		}
+		
+		</style>
+	</head>
+	<body>
+		<div id="crosshair"></div>
+		<div class="loading-screen" id="loadingScreen">
+			<!-- Add loading animation or text here -->
+			Loading...
+		</div>
+		<div id="overlay">
+			<div id="popup">
+				<p>Hop in the X-Wing to fly</p>
+				<a href="EwokLevel2/EwokLvl2.html" target="_blank">
+					<button>Take Off?</button>
+				</a>
+			</div>
+		</div>
+		<div id="overlay2">
+			<div id="popup2">
+				<p>Take the Speeder for a spin?</p>
+				<a href="/Ewok/EwokLevel3/EwokLvl3.html" target="_blank">
+					<button>Go!</button>
+				</a>
+			</div>
+		</div>
+
+		
+		<script type="module" src="Ewok.js"></script>
+	</body>
+</html>

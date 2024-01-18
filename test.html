@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>My first three.js app</title>
+		<style>
+			
+            
+            body {
+            margin: 0;
+            overflow: hidden; /* Hide browser default margin and scrollbar */
+            }
+
+            canvas {
+            display: block; /* Make the canvas a block element to fill the entire window */
+            }
+
+            #crosshair {
+            position: absolute;
+            top: 40%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 25px;
+            height: 25px;
+            border: 2px solid white;
+            border-radius: 50%;
+            box-sizing: border-box;
+            pointer-events: none; /* Make sure the crosshair doesn't block interaction with the canvas */
+            }
+    </style>
+	</head>
+	<body>
+        <div id="crosshair"></div>
+		<script type="module" src="/test.js"></script>
+	</body>
+</html>

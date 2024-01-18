@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Starwars Space</title>
+        <script type="importmap">
+            {
+                "imports": {
+                "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+                "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+                }
+            }
+        </script>
+		<style>
+			
+            
+            body {
+            margin: 0;
+            overflow: hidden; /* Hide browser default margin and scrollbar */
+            }
+
+            canvas {
+            display: block; /* Make the canvas a block element to fill the entire window */
+            }
+
+            #crosshair {
+            position: absolute;
+            top: 45%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 25px;
+            height: 25px;
+            border: 2px solid white;
+            border-radius: 50%;
+            box-sizing: border-box;
+            pointer-events: none; /* Make sure the crosshair doesn't block interaction with the canvas */
+            }
+    </style>
+	</head>
+	<body>
+        <div id="crosshair"></div>
+		<script type="module" src="/main.js"></script>
+	</body>
+</html>
